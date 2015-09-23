@@ -23,7 +23,7 @@ func (w *DateWidget) basicLoop() {
 	msg.Name = "Date"
 	msg.Color = "#ffffff"
 	msg.Instance = strconv.Itoa(w.Instance)
-	const layout = "15:04, янв 2, 2006"
+	const layout = "15:04, Jan. 2, 2006"
 	for {
 		msg.FullText = fmt.Sprintf("%s", time.Now().Format(layout))
 		w.Output <- *msg
